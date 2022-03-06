@@ -1,3 +1,3 @@
 # EasyRust
 Rust Pracice Repo with Easy Rust<br/>
-**using repl.it**
+**using [repl.it](https://replit.com)**
