@@ -1,22 +1,22 @@
 // control flow
 
 fn main() {
-  let num = 7;
-  let num2 = 10;
-  if num == 7 && num2 == 10{
-    println!("They both match!!");
-  } else if num == 6 { // && = and, || = or
-    println!("It's six");
-  } else {
-    println!("What are you!??");
-  }
+  let sky = "cloudy";
+  let temperature = "warm";
 
-  // expression based language
-  let my_num = 5u8;
-  let second_num = match my_num { // better than switch
-    0 => 23,
-    1 => 234,
-    _ => 0,
+  // match statemets is like filter -> order is important
+  match (sky, temperature) {
+    ("cloudy", "cold") => println!("not very nice"),
+    ("clear", "warn") => println!("nice!"),
+    ("cloudy", _) => println!("just cloudy and something"),
+    _ => println!("Not sure...")
   };
-  println!("second is {}", second_num);
+
+  let children = 5;
+  let married = true;
+  match (children, married) {
+    (c, m) if !m => println!("{}", c),
+    (c, m) if c == 0 && m => println!("married but no child"),
+    _ => println!("IDK")
+  }
 }
