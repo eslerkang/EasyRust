@@ -1,5 +1,11 @@
+fn match_num(input: i32) {
+  match input {
+    number @ 0..=10 => println!("it's between 0 10. it's the number {}", number),
+    _ => println!("Haam")
+  };
+}
+
 fn main() {
-  let num = 8;
-  let some = if num == 10 {8} else {33};
-  println!("{}", some);
+  match_num(10);
+  match_num(100);
 }
