@@ -1,22 +1,17 @@
-// control flow
+fn match_colors(rgb: (u32, u32, u32)) {
+  match rgb {
+    (r, _, _) if r < 10 => println!("Not much red"),
+    (_, g, _) if g < 10 => println!("Not much green"),
+    (_, _, b) if b < 10 => println!("Not much blue"),
+    _ =>  println!("every color has at least 10"),
+  }
+}
 
 fn main() {
-  let sky = "cloudy";
-  let temperature = "warm";
-
-  // match statemets is like filter -> order is important
-  match (sky, temperature) {
-    ("cloudy", "cold") => println!("not very nice"),
-    ("clear", "warn") => println!("nice!"),
-    ("cloudy", _) => println!("just cloudy and something"),
-    _ => println!("Not sure...")
-  };
-
-  let children = 5;
-  let married = true;
-  match (children, married) {
-    (c, m) if !m => println!("{}", c),
-    (c, m) if c == 0 && m => println!("married but no child"),
-    _ => println!("IDK")
-  }
+  let first = (200, 0, 0);
+  let second = (50, 50, 50);
+  let third = (200, 50, 0);
+  match_colors(first);
+  match_colors(second);
+  match_colors(third);
 }
