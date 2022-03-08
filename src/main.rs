@@ -1,17 +1,5 @@
-fn match_colors(rgb: (u32, u32, u32)) {
-  match rgb {
-    (r, _, _) if r < 10 => println!("Not much red"),
-    (_, g, _) if g < 10 => println!("Not much green"),
-    (_, _, b) if b < 10 => println!("Not much blue"),
-    _ =>  println!("every color has at least 10"),
-  }
-}
-
 fn main() {
-  let first = (200, 0, 0);
-  let second = (50, 50, 50);
-  let third = (200, 50, 0);
-  match_colors(first);
-  match_colors(second);
-  match_colors(third);
+  let num = 8;
+  let some = if num == 10 {8} else {33};
+  println!("{}", some);
 }
