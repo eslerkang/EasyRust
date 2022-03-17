@@ -16,9 +16,10 @@ fn take_fifth(value: Vec<i32>) -> Option<i32> {
 // wrap in an Option
 
 fn main() {
-  let vec = vec![1, 2];
+  let vec = vec![1, 2, 3, 4, 5];
   let fifth = take_fifth(vec);
   println!("{:?}", fifth);
+  
   // .unwrap() - take out what is inside
   match fifth {
     Some(number) => println!("I got {}", number),
@@ -32,5 +33,5 @@ fn main() {
   // unwrap on None -> panic
 
   // .expect -> can make panic message
-  fifth.expect("Needed at least five items - make sure Vec has at least 5 items");
+  println!("We expect: {}", fifth.expect("Needed at least five items - make sure Vec has at least 5 items"));
 }
